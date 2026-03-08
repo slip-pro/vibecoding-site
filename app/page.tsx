@@ -1,35 +1,79 @@
 export default function Home() {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'Вайбкодинг — создай сайт с AI',
+    description:
+      'Бесплатный курс из двух частей: от нуля до ' +
+      'задеплоенного сайта и профессионального AI-workflow.',
+    provider: {
+      '@type': 'Organization',
+      name: 'kkts.ai',
+      url: 'https://kkts.ai',
+    },
+    isAccessibleForFree: true,
+    inLanguage: 'ru',
+    url: 'https://vibecoding.ktks.ai',
+    hasCourseInstance: [
+      {
+        '@type': 'CourseInstance',
+        name: 'От нуля до деплоя',
+        courseMode: 'online',
+      },
+      {
+        '@type': 'CourseInstance',
+        name: 'Профессиональный AI-workflow',
+        courseMode: 'online',
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-[#0A0A0A] text-[#F9FAFB]">
+      {/* eslint-disable-next-line react/no-danger -- static JSON-LD, no user input */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd),
+        }}
+      />
       {/* ===== HEADER ===== */}
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md shadow-lg shadow-emerald-500/5">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
           <a
             href="/"
-            className="font-mono font-bold text-base tracking-tight"
+            className="flex items-center gap-2"
           >
-            vibecoding
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/logo-white.svg"
+              alt="vibecoding"
+              className="h-7 w-auto"
+            />
+            <span className="font-mono font-bold text-base tracking-tight text-emerald-500">
+              vibecoding
+            </span>
           </a>
-          <nav className="flex items-center gap-6 text-sm text-[#9CA3AF]">
+          <nav className="flex items-center gap-6 text-sm font-medium uppercase tracking-wider text-[#9CA3AF]">
             <a
               href="#courses"
-              className="hover:text-[#F9FAFB] transition-colors"
+              className="hover:text-emerald-500 transition-colors"
             >
               Курсы
             </a>
             <a
               href="#roadmap"
-              className="hover:text-[#F9FAFB] transition-colors"
+              className="hover:text-emerald-500 transition-colors"
             >
               Программа
             </a>
             <a
-              href="https://github.com/slip-pro"
+              href="https://kkts.ai/workshops/vibe-coding"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-[#F9FAFB] transition-colors"
+              className="hover:text-emerald-500 transition-colors"
             >
-              GitHub
+              Для команд
             </a>
           </nav>
         </div>
@@ -624,23 +668,32 @@ export default function Home() {
             Авторы
           </h2>
           <p className="mt-6 max-w-3xl text-lg text-[#9CA3AF] leading-relaxed">
-            Курс создан командой kkts.ai — мы строим AI-системы
-            и учим работать с AI продуктивно.
+            Курс создан командой Кактус.AI — мы помогаем
+            компаниям внедрять AI: обучаем команды, запускаем
+            пилоты и разворачиваем безопасную AI-инфраструктуру.
           </p>
 
           <div className="mt-10 max-w-xl">
             <div className="relative rounded-2xl">
               <div className="absolute inset-0 bg-grid opacity-30 rounded-2xl" />
               <div className="glass-card relative rounded-2xl p-8 hover:border-emerald-500/50 transition-all duration-300">
-                <h3 className="font-mono font-bold text-xl">
-                  kkts.ai
-                </h3>
+                <div className="flex items-center gap-3">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src="/logo.svg"
+                    alt="kkts.ai"
+                    className="h-10 w-auto"
+                  />
+                  <h3 className="font-mono font-bold text-xl text-emerald-500">
+                    kkts.ai
+                  </h3>
+                </div>
                 <p className="mt-3 text-[#9CA3AF] leading-relaxed">
-                  Команда разработчиков и продакт-менеджеров,
-                  которые используют AI в ежедневной работе.
-                  Открытый код, практический подход.
+                  Подразделение ScrumTrek по внедрению AI.
+                  18 лет трансформаций, 1 300+ обученных
+                  специалистов, 50+ компаний на сопровождении.
                 </p>
-                <div className="mt-4 flex items-center gap-4">
+                <div className="mt-4">
                   <a
                     href="https://kkts.ai"
                     target="_blank"
@@ -650,16 +703,56 @@ export default function Home() {
                     kkts.ai
                     <span aria-hidden="true">&rarr;</span>
                   </a>
-                  <a
-                    href="https://github.com/slip-pro"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-[#9CA3AF] hover:text-[#F9FAFB] transition-colors duration-200"
-                  >
-                    GitHub
-                    <span aria-hidden="true">&rarr;</span>
-                  </a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== FOR TEAMS ===== */}
+      <section className="py-20 sm:py-28 border-t border-white/10">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="relative rounded-2xl overflow-hidden">
+            <div className="absolute inset-0 bg-grid opacity-30" />
+            <div className="glass-card relative rounded-2xl p-8 sm:p-12 hover:border-fuchsia-500/50 transition-all duration-300">
+              <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-fuchsia-500/10 text-fuchsia-400 border border-fuchsia-500/30">
+                Для организаций
+              </span>
+              <h2 className="mt-5 font-mono font-bold text-3xl sm:text-4xl tracking-tight">
+                Фабрика вайб-кодинга
+              </h2>
+              <p className="mt-4 max-w-2xl text-lg text-[#9CA3AF] leading-relaxed">
+                Двухдневный хакатон + 4-8 недель сопровождения.
+                Ваши менеджеры и продакты научатся создавать
+                IT-продукты с помощью AI-агентов — без навыков
+                программирования.
+              </p>
+              <ul className="mt-6 space-y-2 text-sm text-[#9CA3AF]">
+                {[
+                  'Рабочие прототипы ко второму дню',
+                  'Снижение зависимости от подрядчиков',
+                  'Продакты, PM, предприниматели, CTO',
+                  'Очно или онлайн',
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="text-fuchsia-400 mt-0.5" aria-hidden="true">
+                      &#10003;
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8">
+                <a
+                  href="https://kkts.ai/workshops/vibe-coding"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-fuchsia-600 text-white font-semibold text-lg hover:bg-fuchsia-500 transition-colors duration-200"
+                >
+                  Узнать подробнее
+                  <span aria-hidden="true">&rarr;</span>
+                </a>
               </div>
             </div>
           </div>
@@ -716,24 +809,14 @@ export default function Home() {
       <footer className="border-t border-white/10 py-8">
         <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#9CA3AF]">
           <span>&copy; {new Date().getFullYear()} kkts.ai</span>
-          <div className="flex items-center gap-6">
-            <a
-              href="https://github.com/slip-pro"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#F9FAFB] transition-colors"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://kkts.ai"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-[#F9FAFB] transition-colors"
-            >
-              kkts.ai
-            </a>
-          </div>
+          <a
+            href="https://kkts.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-[#F9FAFB] transition-colors"
+          >
+            kkts.ai
+          </a>
         </div>
       </footer>
     </main>

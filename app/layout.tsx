@@ -14,11 +14,41 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
+const siteUrl = 'https://vibecoding.ktks.ai';
+const title = 'Вайбкодинг — создай сайт с AI';
+const description =
+  'Бесплатный курс из двух частей: от нуля до задеплоенного ' +
+  'сайта и профессионального AI-workflow. Без знания кода.';
+
 export const metadata: Metadata = {
-  title: 'Вайбкодинг — создай сайт с AI',
-  description:
-    'Двухчастный курс: от нуля до задеплоенного сайта ' +
-    'и профессионального AI-workflow',
+  title,
+  description,
+  metadataBase: new URL(siteUrl),
+  alternates: { canonical: '/' },
+  openGraph: {
+    title,
+    description,
+    url: siteUrl,
+    siteName: 'Вайбкодинг',
+    locale: 'ru_RU',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+  },
+  icons: {
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+    ],
+    apple: '/apple-touch-icon.png',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
