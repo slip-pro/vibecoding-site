@@ -24,7 +24,7 @@ export default function Home() {
               Программа
             </a>
             <a
-              href="https://github.com/kkts-ai"
+              href="https://github.com/slip-pro"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#F9FAFB] transition-colors"
@@ -311,7 +311,7 @@ export default function Home() {
                 </p>
                 <div className="mt-auto pt-8">
                   <a
-                    href="https://github.com/kkts-ai/vibecoding-intro"
+                    href="https://github.com/slip-pro/vibecoding-intro"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-[#0A0A0A] font-semibold hover:bg-emerald-400 transition-colors duration-200"
@@ -365,7 +365,7 @@ export default function Home() {
                 </p>
                 <div className="mt-auto pt-8">
                   <a
-                    href="https://github.com/kkts-ai/vibecoding-workflow"
+                    href="https://github.com/slip-pro/vibecoding-workflow"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-[#0A0A0A] font-semibold hover:bg-emerald-400 transition-colors duration-200"
@@ -651,7 +651,7 @@ export default function Home() {
                     <span aria-hidden="true">&rarr;</span>
                   </a>
                   <a
-                    href="https://github.com/kkts-ai"
+                    href="https://github.com/slip-pro"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 text-[#9CA3AF] hover:text-[#F9FAFB] transition-colors duration-200"
@@ -686,7 +686,7 @@ export default function Home() {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="https://github.com/kkts-ai/vibecoding-intro"
+              href="https://github.com/slip-pro/vibecoding-intro"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-emerald-500 text-[#0A0A0A] font-semibold text-lg hover:bg-emerald-400 transition-colors duration-200"
@@ -695,7 +695,7 @@ export default function Home() {
               <span aria-hidden="true">&rarr;</span>
             </a>
             <a
-              href="https://github.com/kkts-ai/vibecoding-workflow"
+              href="https://github.com/slip-pro/vibecoding-workflow"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-[#F9FAFB] font-semibold text-lg hover:bg-white/5 transition-colors duration-200"
@@ -718,7 +718,7 @@ export default function Home() {
           <span>&copy; {new Date().getFullYear()} kkts.ai</span>
           <div className="flex items-center gap-6">
             <a
-              href="https://github.com/kkts-ai"
+              href="https://github.com/slip-pro"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-[#F9FAFB] transition-colors"
