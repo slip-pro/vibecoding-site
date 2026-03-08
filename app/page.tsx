@@ -50,11 +50,11 @@ export default function Home() {
               alt="vibecoding"
               className="h-7 w-auto"
             />
-            <span className="font-mono font-bold text-base tracking-tight text-emerald-500">
+            <span className="hidden sm:inline font-mono font-bold text-base tracking-tight text-emerald-500">
               vibecoding
             </span>
           </a>
-          <nav className="flex items-center gap-6 text-sm font-medium uppercase tracking-wider text-[#9CA3AF]">
+          <nav className="hidden sm:flex items-center gap-6 text-sm font-medium uppercase tracking-wider text-[#9CA3AF]">
             <a
               href="#courses"
               className="hover:text-emerald-500 transition-colors"
@@ -74,6 +74,29 @@ export default function Home() {
               className="hover:text-emerald-500 transition-colors"
             >
               Для команд
+            </a>
+          </nav>
+          {/* Mobile nav */}
+          <nav className="flex sm:hidden items-center gap-3 text-xs font-medium uppercase tracking-wider text-[#9CA3AF]">
+            <a
+              href="#courses"
+              className="hover:text-emerald-500 transition-colors"
+            >
+              Курсы
+            </a>
+            <a
+              href="#roadmap"
+              className="hover:text-emerald-500 transition-colors"
+            >
+              Программа
+            </a>
+            <a
+              href="https://kkts.ai/workshops/vibe-coding"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-emerald-500 transition-colors"
+            >
+              Команды
             </a>
           </nav>
         </div>
@@ -150,7 +173,7 @@ export default function Home() {
         </svg>
 
         <div className="relative max-w-5xl mx-auto px-6">
-          <h1 className="font-mono font-bold text-4xl sm:text-5xl md:text-6xl leading-tight tracking-tight">
+          <h1 className="font-mono font-bold text-3xl sm:text-5xl md:text-6xl leading-tight tracking-tight">
             Создай сайт с AI.
             <br />
             Построй процесс.
@@ -162,7 +185,7 @@ export default function Home() {
 
           {/* Info bar */}
           <div className="mt-10 inline-flex flex-wrap gap-px rounded-2xl overflow-hidden">
-            <div className="glass-card flex items-center gap-6 sm:gap-8 px-6 py-3 rounded-2xl">
+            <div className="glass-card flex flex-wrap items-center gap-3 sm:gap-8 px-4 sm:px-6 py-3 rounded-2xl">
               {[
                 '2 курса',
                 'Бесплатно',
@@ -182,7 +205,7 @@ export default function Home() {
           <div className="mt-10">
             <a
               href="#courses"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-emerald-500 text-[#0A0A0A] font-semibold text-lg hover:bg-emerald-400 transition-colors duration-200"
+              className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-emerald-500 text-[#0A0A0A] font-semibold text-base sm:text-lg hover:bg-emerald-400 transition-colors duration-200"
             >
               Начать сейчас
               <span aria-hidden="true">&rarr;</span>
@@ -206,7 +229,7 @@ export default function Home() {
       {/* ===== WHAT IS VIBECODING ===== */}
       <section className="py-20 sm:py-28">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-mono font-bold text-3xl sm:text-4xl tracking-tight">
+          <h2 className="font-mono font-bold text-2xl sm:text-3xl md:text-4xl tracking-tight">
             Что такое вайбкодинг?
           </h2>
           <p className="mt-6 max-w-3xl text-lg text-[#9CA3AF] leading-relaxed">
@@ -269,7 +292,7 @@ export default function Home() {
       {/* ===== HOW IT WORKS ===== */}
       <section className="py-20 sm:py-28 border-t border-white/10">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-mono font-bold text-3xl sm:text-4xl tracking-tight">
+          <h2 className="font-mono font-bold text-2xl sm:text-3xl md:text-4xl tracking-tight">
             Как это работает
           </h2>
           <p className="mt-6 max-w-3xl text-lg text-[#9CA3AF] leading-relaxed">
@@ -313,15 +336,15 @@ export default function Home() {
       {/* ===== COURSES ===== */}
       <section id="courses" className="py-20 sm:py-28">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-mono font-bold text-3xl sm:text-4xl tracking-tight">
+          <h2 className="font-mono font-bold text-2xl sm:text-3xl md:text-4xl tracking-tight">
             Два курса — один путь
           </h2>
 
-          <div className="mt-14 grid gap-8 lg:grid-cols-2">
+          <div className="mt-10 sm:mt-14 grid gap-8 lg:grid-cols-2">
             {/* Course 1 */}
             <div className="relative rounded-2xl">
               <div className="absolute inset-0 bg-grid opacity-30 rounded-2xl" />
-              <div className="glass-card relative rounded-2xl p-8 hover:border-emerald-500/50 transition-all duration-300 flex flex-col">
+              <div className="glass-card relative rounded-2xl p-6 sm:p-8 hover:border-emerald-500/50 transition-all duration-300 flex flex-col">
                 <span className="inline-block self-start px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/30">
                   Часть 1
                 </span>
@@ -376,7 +399,7 @@ export default function Home() {
                 aria-hidden="true"
               />
               <div className="absolute inset-0 bg-grid opacity-30 rounded-2xl" />
-              <div className="glass-card relative rounded-2xl p-8 hover:border-emerald-500/50 transition-all duration-300 flex flex-col">
+              <div className="glass-card relative rounded-2xl p-6 sm:p-8 hover:border-emerald-500/50 transition-all duration-300 flex flex-col">
                 <span className="inline-block self-start px-3 py-1 rounded-full text-xs font-semibold bg-fuchsia-500/10 text-fuchsia-400 border border-fuchsia-500/30">
                   Часть 2
                 </span>
@@ -427,7 +450,7 @@ export default function Home() {
       {/* ===== ROADMAP ===== */}
       <section id="roadmap" className="py-20 sm:py-28 border-t border-white/10">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-mono font-bold text-3xl sm:text-4xl tracking-tight">
+          <h2 className="font-mono font-bold text-2xl sm:text-3xl md:text-4xl tracking-tight">
             Программа
           </h2>
           <p className="mt-6 max-w-3xl text-lg text-[#9CA3AF] leading-relaxed">
@@ -573,7 +596,7 @@ export default function Home() {
       {/* ===== WHAT YOU GET ===== */}
       <section className="py-20 sm:py-28">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-mono font-bold text-3xl sm:text-4xl tracking-tight">
+          <h2 className="font-mono font-bold text-2xl sm:text-3xl md:text-4xl tracking-tight">
             Что ты получишь
           </h2>
 
@@ -664,7 +687,7 @@ export default function Home() {
       {/* ===== AUTHORS ===== */}
       <section className="py-20 sm:py-28">
         <div className="max-w-5xl mx-auto px-6">
-          <h2 className="font-mono font-bold text-3xl sm:text-4xl tracking-tight">
+          <h2 className="font-mono font-bold text-2xl sm:text-3xl md:text-4xl tracking-tight">
             Авторы
           </h2>
           <p className="mt-6 max-w-3xl text-lg text-[#9CA3AF] leading-relaxed">
@@ -719,7 +742,7 @@ export default function Home() {
               <span className="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-fuchsia-500/10 text-fuchsia-400 border border-fuchsia-500/30">
                 Для организаций
               </span>
-              <h2 className="mt-5 font-mono font-bold text-3xl sm:text-4xl tracking-tight">
+              <h2 className="mt-5 font-mono font-bold text-2xl sm:text-3xl md:text-4xl tracking-tight">
                 Фабрика вайб-кодинга
               </h2>
               <p className="mt-4 max-w-2xl text-lg text-[#9CA3AF] leading-relaxed">
@@ -748,7 +771,7 @@ export default function Home() {
                   href="https://kkts.ai/workshops/vibe-coding"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-fuchsia-600 text-white font-semibold text-lg hover:bg-fuchsia-500 transition-colors duration-200"
+                  className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-fuchsia-600 text-white font-semibold text-base sm:text-lg hover:bg-fuchsia-500 transition-colors duration-200"
                 >
                   Узнать подробнее
                   <span aria-hidden="true">&rarr;</span>
@@ -769,7 +792,7 @@ export default function Home() {
         />
 
         <div className="relative max-w-5xl mx-auto px-6">
-          <h2 className="font-mono font-bold text-3xl sm:text-4xl tracking-tight">
+          <h2 className="font-mono font-bold text-2xl sm:text-3xl md:text-4xl tracking-tight">
             Готов начать?
           </h2>
           <p className="mt-6 max-w-2xl text-lg text-[#9CA3AF] leading-relaxed">
@@ -777,12 +800,12 @@ export default function Home() {
             вечером — завтра у тебя будет свой сайт в интернете.
           </p>
 
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-10 flex flex-col sm:flex-row flex-wrap gap-4">
             <a
               href="https://github.com/slip-pro/vibecoding-intro"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-emerald-500 text-[#0A0A0A] font-semibold text-lg hover:bg-emerald-400 transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-emerald-500 text-[#0A0A0A] font-semibold text-base sm:text-lg hover:bg-emerald-400 transition-colors duration-200"
             >
               Начать с Части 1
               <span aria-hidden="true">&rarr;</span>
@@ -791,7 +814,7 @@ export default function Home() {
               href="https://github.com/slip-pro/vibecoding-workflow"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-[#F9FAFB] font-semibold text-lg hover:bg-white/5 transition-colors duration-200"
+              className="inline-flex items-center justify-center gap-2 px-6 sm:px-8 py-3 sm:py-4 rounded-full border border-white/20 text-[#F9FAFB] font-semibold text-base sm:text-lg hover:bg-white/5 transition-colors duration-200"
             >
               Часть 2
               <span aria-hidden="true">&rarr;</span>
