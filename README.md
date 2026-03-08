@@ -11,7 +11,7 @@
 
 ```bash
 # Клонировать
-git clone https://github.com/kkts-ai/vibecoding-site
+git clone https://github.com/slip-pro/vibecoding-site
 cd vibecoding-site
 
 # Установить зависимости
@@ -38,5 +38,5 @@ docker compose up --build
 
 ## Курсы
 
-- [Часть 1: От нуля до деплоя](https://github.com/kkts-ai/vibecoding-intro) — создание и деплой сайта
+- [Часть 1: От нуля до деплоя](https://github.com/slip-pro/vibecoding-intro) — создание и деплой сайта
 - Часть 2: Профессиональный AI-workflow — скоро
