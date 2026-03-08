@@ -14,7 +14,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: 'swap',
 });
 
-const siteUrl = 'https://vibecoding.ktks.ai';
+const siteUrl = 'https://vibecoding.kkts.ai';
 const title = 'Вайбкодинг — создай сайт с AI';
 const description =
   'Бесплатный курс из двух частей: от нуля до задеплоенного ' +

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://vibecoding.ktks.ai/sitemap.xml',
+    sitemap: 'https://vibecoding.kkts.ai/sitemap.xml',
   };
 }

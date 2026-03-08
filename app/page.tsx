@@ -13,7 +13,7 @@ export default function Home() {
     },
     isAccessibleForFree: true,
     inLanguage: 'ru',
-    url: 'https://vibecoding.ktks.ai',
+    url: 'https://vibecoding.kkts.ai',
     hasCourseInstance: [
       {
         '@type': 'CourseInstance',
