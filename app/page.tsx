@@ -1,6 +1,40 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#0A0A0A] text-[#F9FAFB]">
+      {/* ===== HEADER ===== */}
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-[#0A0A0A]/80 backdrop-blur-md">
+        <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+          <a
+            href="/"
+            className="font-mono font-bold text-base tracking-tight"
+          >
+            vibecoding
+          </a>
+          <nav className="flex items-center gap-6 text-sm text-[#9CA3AF]">
+            <a
+              href="#courses"
+              className="hover:text-[#F9FAFB] transition-colors"
+            >
+              Курсы
+            </a>
+            <a
+              href="#roadmap"
+              className="hover:text-[#F9FAFB] transition-colors"
+            >
+              Программа
+            </a>
+            <a
+              href="https://github.com/kkts-ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#F9FAFB] transition-colors"
+            >
+              GitHub
+            </a>
+          </nav>
+        </div>
+      </header>
+
       {/* ===== HERO ===== */}
       <section className="relative pt-20 pb-16 border-b border-white/10 overflow-hidden">
         {/* Background grid */}
@@ -78,7 +112,7 @@ export default function Home() {
             Построй процесс.
           </h1>
           <p className="mt-6 max-w-2xl text-lg sm:text-xl text-[#9CA3AF] leading-relaxed">
-            Двухчастный курс: от нулевого опыта до задеплоенного
+            Курс из двух частей: от нулевого опыта до задеплоенного
             сайта и профессионального AI-workflow. Без знания кода.
           </p>
 
@@ -112,7 +146,15 @@ export default function Home() {
           </div>
 
           <p className="mt-6 text-sm text-[#9CA3AF]">
-            by kkts.ai
+            by{' '}
+            <a
+              href="https://kkts.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-emerald-400 hover:text-emerald-300 transition-colors"
+            >
+              kkts.ai
+            </a>
           </p>
         </div>
       </section>
@@ -133,17 +175,32 @@ export default function Home() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                icon: '\u{1F4AC}',
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-400">
+                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    <path d="M8 10h.01" /><path d="M12 10h.01" /><path d="M16 10h.01" />
+                  </svg>
+                ),
                 title: 'Опиши — не кодируй',
                 text: 'Скажи AI что хочешь — получи готовый код',
               },
               {
-                icon: '\u26A1',
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-400">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                  </svg>
+                ),
                 title: 'За вечер',
                 text: 'Первый сайт можно создать и задеплоить за несколько часов',
               },
               {
-                icon: '\u{1F680}',
+                icon: (
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-400">
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                    <line x1="14" y1="4" x2="10" y2="20" />
+                  </svg>
+                ),
                 title: 'Как профессионалы',
                 text: 'Те же инструменты, что используют разработчики',
               },
@@ -151,13 +208,7 @@ export default function Home() {
               <div key={card.title} className="relative rounded-2xl">
                 <div className="absolute inset-0 bg-grid opacity-30 rounded-2xl" />
                 <div className="glass-card relative rounded-2xl p-6 hover:border-emerald-500/50 transition-all duration-300">
-                  <span
-                    className="text-3xl"
-                    role="img"
-                    aria-hidden="true"
-                  >
-                    {card.icon}
-                  </span>
+                  {card.icon}
                   <h3 className="mt-4 font-mono font-bold text-lg">
                     {card.title}
                   </h3>
@@ -165,6 +216,50 @@ export default function Home() {
                     {card.text}
                   </p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== HOW IT WORKS ===== */}
+      <section className="py-20 sm:py-28 border-t border-white/10">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="font-mono font-bold text-3xl sm:text-4xl tracking-tight">
+            Как это работает
+          </h2>
+          <p className="mt-6 max-w-3xl text-lg text-[#9CA3AF] leading-relaxed">
+            Три шага — и ты уже создаёшь.
+          </p>
+
+          <div className="mt-14 grid gap-8 sm:grid-cols-3">
+            {[
+              {
+                step: '01',
+                title: 'Установи AI-редактор',
+                text: 'Скачай Cursor — это VS Code с AI внутри. Мы проведём через установку.',
+              },
+              {
+                step: '02',
+                title: 'Скажи что хочешь',
+                text: 'Опиши AI свой сайт: тему, цвета, разделы. Он создаст первую версию.',
+              },
+              {
+                step: '03',
+                title: 'Итерируй и деплой',
+                text: 'Правь через диалог, пока не понравится. Потом — в интернет.',
+              },
+            ].map((item) => (
+              <div key={item.step} className="relative">
+                <span className="font-mono text-5xl font-bold text-emerald-500/20">
+                  {item.step}
+                </span>
+                <h3 className="mt-2 font-mono font-bold text-lg">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-[#9CA3AF] leading-relaxed">
+                  {item.text}
+                </p>
               </div>
             ))}
           </div>
@@ -216,10 +311,12 @@ export default function Home() {
                 </p>
                 <div className="mt-auto pt-8">
                   <a
-                    href="#"
+                    href="https://github.com/kkts-ai/vibecoding-intro"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-[#0A0A0A] font-semibold hover:bg-emerald-400 transition-colors duration-200"
                   >
-                    Открыть курс
+                    Открыть на GitHub
                     <span aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
@@ -248,10 +345,10 @@ export default function Home() {
                 </p>
                 <ul className="mt-6 space-y-2 text-sm text-[#9CA3AF]">
                   {[
-                    'CLAUDE.md — память AI для твоего проекта',
+                    'CLAUDE.md — память AI для проекта',
                     'Бэклог и планирование',
                     'Скиллы: /sprint, /close, /plan',
-                    'Субагенты: @developer, @auditor, @tester',
+                    'Субагенты: @developer, @auditor',
                     'MCP — инструменты для AI',
                     'Хуки — автоматические проверки',
                   ].map((item) => (
@@ -268,13 +365,161 @@ export default function Home() {
                 </p>
                 <div className="mt-auto pt-8">
                   <a
-                    href="#"
+                    href="https://github.com/kkts-ai/vibecoding-workflow"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-emerald-500 text-[#0A0A0A] font-semibold hover:bg-emerald-400 transition-colors duration-200"
                   >
-                    Открыть курс
+                    Открыть на GitHub
                     <span aria-hidden="true">&rarr;</span>
                   </a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== ROADMAP ===== */}
+      <section id="roadmap" className="py-20 sm:py-28 border-t border-white/10">
+        <div className="max-w-5xl mx-auto px-6">
+          <h2 className="font-mono font-bold text-3xl sm:text-4xl tracking-tight">
+            Программа
+          </h2>
+          <p className="mt-6 max-w-3xl text-lg text-[#9CA3AF] leading-relaxed">
+            14 фаз — от первого знакомства до профессионального workflow.
+          </p>
+
+          <div className="mt-14 grid gap-12 lg:grid-cols-2">
+            {/* Part 1 phases */}
+            <div>
+              <h3 className="font-mono font-bold text-lg text-emerald-400 mb-6">
+                Часть 1: От нуля до деплоя
+              </h3>
+              <div className="space-y-0">
+                {[
+                  {
+                    n: 0,
+                    title: 'Знакомство',
+                    motto: 'Вайбкодинг — это диалог, не монолог',
+                  },
+                  {
+                    n: 1,
+                    title: 'Node.js',
+                    motto: 'Мотор для сайтов',
+                  },
+                  {
+                    n: 2,
+                    title: 'Next.js',
+                    motto: 'Фундамент дома',
+                  },
+                  {
+                    n: 3,
+                    title: 'Tailwind + AI',
+                    motto: 'Краска, AI — художник',
+                  },
+                  {
+                    n: 4,
+                    title: 'Git и GitHub',
+                    motto: 'Машина времени для кода',
+                  },
+                  {
+                    n: 5,
+                    title: 'Docker',
+                    motto: 'Чемодан для переезда',
+                  },
+                  {
+                    n: 6,
+                    title: 'Домен и VPS',
+                    motto: 'Твой компьютер в облаке',
+                  },
+                  {
+                    n: 7,
+                    title: 'Деплой',
+                    motto: 'Печать на документе',
+                  },
+                ].map((phase, i, arr) => (
+                  <div key={phase.n} className="flex gap-4">
+                    {/* Timeline column */}
+                    <div className="flex flex-col items-center">
+                      <div className="w-8 h-8 rounded-full border-2 border-emerald-500/50 bg-emerald-500/10 flex items-center justify-center text-xs font-mono font-bold text-emerald-400">
+                        {phase.n}
+                      </div>
+                      {i < arr.length - 1 && (
+                        <div className="w-px flex-1 bg-emerald-500/20 min-h-[2rem]" />
+                      )}
+                    </div>
+                    {/* Content */}
+                    <div className="pb-6">
+                      <p className="font-mono font-bold text-sm">
+                        {phase.title}
+                      </p>
+                      <p className="text-sm text-[#9CA3AF]">
+                        {phase.motto}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Part 2 phases */}
+            <div>
+              <h3 className="font-mono font-bold text-lg text-fuchsia-400 mb-6">
+                Часть 2: AI-workflow
+              </h3>
+              <div className="space-y-0">
+                {[
+                  {
+                    n: 8,
+                    title: 'CLAUDE.md',
+                    motto: 'Память, которая не забывает',
+                  },
+                  {
+                    n: 9,
+                    title: 'Бэклог',
+                    motto: 'Мечта, записанная на бумаге',
+                  },
+                  {
+                    n: 10,
+                    title: 'Скиллы',
+                    motto: 'Марафон из маленьких шагов',
+                  },
+                  {
+                    n: 11,
+                    title: 'Субагенты',
+                    motto: 'Каждому по специальности',
+                  },
+                  {
+                    n: 12,
+                    title: 'MCP',
+                    motto: 'Руки для AI',
+                  },
+                  {
+                    n: 13,
+                    title: 'Хуки',
+                    motto: 'AI, который себя проверяет',
+                  },
+                ].map((phase, i, arr) => (
+                  <div key={phase.n} className="flex gap-4">
+                    <div className="flex flex-col items-center">
+                      <div className="w-8 h-8 rounded-full border-2 border-fuchsia-500/50 bg-fuchsia-500/10 flex items-center justify-center text-xs font-mono font-bold text-fuchsia-400">
+                        {phase.n}
+                      </div>
+                      {i < arr.length - 1 && (
+                        <div className="w-px flex-1 bg-fuchsia-500/20 min-h-[2rem]" />
+                      )}
+                    </div>
+                    <div className="pb-6">
+                      <p className="font-mono font-bold text-sm">
+                        {phase.title}
+                      </p>
+                      <p className="text-sm text-[#9CA3AF]">
+                        {phase.motto}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -291,32 +536,66 @@ export default function Home() {
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                icon: '\u{1F310}',
+                icon: (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-400">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                  </svg>
+                ),
                 title: 'Работающий сайт',
                 text: 'С доменом, HTTPS и Docker',
               },
               {
-                icon: '\u{1F916}',
+                icon: (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-400">
+                    <path d="M12 2a4 4 0 0 1 4 4c0 1.95-2 4-4 4S8 7.95 8 6a4 4 0 0 1 4-4z" />
+                    <path d="M18 14a4 4 0 0 1 4 4c0 1.95-2 4-4 4s-4-2.05-4-4a4 4 0 0 1 4-4z" />
+                    <path d="M6 14a4 4 0 0 1 4 4c0 1.95-2 4-4 4s-4-2.05-4-4a4 4 0 0 1 4-4z" />
+                    <line x1="12" y1="10" x2="18" y2="14" />
+                    <line x1="12" y1="10" x2="6" y2="14" />
+                  </svg>
+                ),
                 title: 'AI как партнёр',
                 text: 'Научишься ставить задачи и получать результат',
               },
               {
-                icon: '\u{1F4CB}',
+                icon: (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-400">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <path d="M3 9h18" />
+                    <path d="M9 21V9" />
+                  </svg>
+                ),
                 title: 'Система работы',
                 text: 'Бэклог, спринты, качество — как в команде',
               },
               {
-                icon: '\u{1F527}',
+                icon: (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-400">
+                    <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                  </svg>
+                ),
                 title: 'Настроенные инструменты',
                 text: 'Claude Code, MCP, хуки готовы к работе',
               },
               {
-                icon: '\u{1F4A1}',
+                icon: (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-400">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                    <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                  </svg>
+                ),
                 title: 'Понимание стека',
                 text: 'Next.js, Docker, nginx, Git — не магия',
               },
               {
-                icon: '\u{1F3AF}',
+                icon: (
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-emerald-400">
+                    <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                    <polyline points="17 6 23 6 23 12" />
+                  </svg>
+                ),
                 title: 'Процесс, а не разовый результат',
                 text: 'Умеешь дорабатывать и улучшать',
               },
@@ -324,13 +603,7 @@ export default function Home() {
               <div key={card.title} className="relative rounded-2xl">
                 <div className="absolute inset-0 bg-grid opacity-30 rounded-2xl" />
                 <div className="glass-card relative rounded-2xl p-6 hover:border-emerald-500/50 transition-all duration-300">
-                  <span
-                    className="text-2xl"
-                    role="img"
-                    aria-hidden="true"
-                  >
-                    {card.icon}
-                  </span>
+                  {card.icon}
                   <h3 className="mt-3 font-mono font-bold text-base">
                     {card.title}
                   </h3>
@@ -364,15 +637,29 @@ export default function Home() {
                 </h3>
                 <p className="mt-3 text-[#9CA3AF] leading-relaxed">
                   Команда разработчиков и продакт-менеджеров,
-                  которые используют AI в ежедневной работе
+                  которые используют AI в ежедневной работе.
+                  Открытый код, практический подход.
                 </p>
-                <a
-                  href="#"
-                  className="inline-flex items-center gap-1 mt-4 text-emerald-400 hover:text-emerald-300 transition-colors duration-200"
-                >
-                  kkts.ai
-                  <span aria-hidden="true">&rarr;</span>
-                </a>
+                <div className="mt-4 flex items-center gap-4">
+                  <a
+                    href="https://kkts.ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-emerald-400 hover:text-emerald-300 transition-colors duration-200"
+                  >
+                    kkts.ai
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                  <a
+                    href="https://github.com/kkts-ai"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-[#9CA3AF] hover:text-[#F9FAFB] transition-colors duration-200"
+                  >
+                    GitHub
+                    <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -397,12 +684,23 @@ export default function Home() {
             вечером — завтра у тебя будет свой сайт в интернете.
           </p>
 
-          <div className="mt-10">
+          <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="#"
+              href="https://github.com/kkts-ai/vibecoding-intro"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-emerald-500 text-[#0A0A0A] font-semibold text-lg hover:bg-emerald-400 transition-colors duration-200"
             >
               Начать с Части 1
+              <span aria-hidden="true">&rarr;</span>
+            </a>
+            <a
+              href="https://github.com/kkts-ai/vibecoding-workflow"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-white/20 text-[#F9FAFB] font-semibold text-lg hover:bg-white/5 transition-colors duration-200"
+            >
+              Часть 2
               <span aria-hidden="true">&rarr;</span>
             </a>
           </div>
@@ -413,6 +711,31 @@ export default function Home() {
           </p>
         </div>
       </section>
+
+      {/* ===== FOOTER ===== */}
+      <footer className="border-t border-white/10 py-8">
+        <div className="max-w-5xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-[#9CA3AF]">
+          <span>&copy; {new Date().getFullYear()} kkts.ai</span>
+          <div className="flex items-center gap-6">
+            <a
+              href="https://github.com/kkts-ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#F9FAFB] transition-colors"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://kkts.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#F9FAFB] transition-colors"
+            >
+              kkts.ai
+            </a>
+          </div>
+        </div>
+      </footer>
     </main>
   );
 }
